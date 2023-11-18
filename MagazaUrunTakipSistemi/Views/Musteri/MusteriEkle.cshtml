@@ -8,12 +8,17 @@
 {
     <label>Ad</label>
     @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Ad, "", new { @style = "color:red" })
     <br />
     <label>Soyad</label>
     @Html.TextBoxFor(x => x.Soyad, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Soyad, "", new { @style = "color:red" })
     <br />
     <label>Şehir</label>
     @Html.TextBoxFor(x => x.Sehir, new { @class = "form-control" })
+    <tbody>
+        @Html.ValidationMessageFor(x => x.Sehir, "", new { @style = "color:red" })
+    </tbody>
     <br />
     <label>Bakiye</label>
     @Html.TextBoxFor(x => x.Bakiye, new { @class = "form-control" })

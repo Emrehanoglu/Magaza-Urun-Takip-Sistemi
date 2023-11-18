@@ -11,8 +11,9 @@ namespace MagazaUrunTakipSistemi.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class TblMusteri
+	using System.ComponentModel.DataAnnotations;
+
+	public partial class TblMusteri
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TblMusteri()
@@ -21,9 +22,12 @@ namespace MagazaUrunTakipSistemi.Models.Entity
         }
     
         public int Id { get; set; }
+		[Required(ErrorMessage ="Müþteri Adýný Girmelisiniz")]
         public string Ad { get; set; }
-        public string Soyad { get; set; }
-        public string Sehir { get; set; }
+		[Required(ErrorMessage = "Müþteri Soyadýný Girmelisiniz")]
+		public string Soyad { get; set; }
+		[Required(ErrorMessage = "Þehir Alanýný Girmelisiniz")]
+		public string Sehir { get; set; }
         public Nullable<decimal> Bakiye { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -25,6 +25,10 @@ namespace MagazaUrunTakipSistemi.Controllers
 		[HttpPost]
 		public ActionResult MusteriEkle(TblMusteri t)
 		{
+			if (!ModelState.IsValid)
+			{
+				return View("MusteriEkle");
+			}
 			db.TblMusteri.Add(t);
 			db.SaveChanges();
 			return RedirectToAction("Index");
