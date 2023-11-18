@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace MagazaUrunTakipSistemi.Controllers
 {
+	[Authorize]
     public class KategoriController : Controller
     {
 		DbMagazaUrunTakipEntities db = new DbMagazaUrunTakipEntities();

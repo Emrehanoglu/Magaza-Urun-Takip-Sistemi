@@ -9,7 +9,8 @@ using PagedList.Mvc;
 
 namespace MagazaUrunTakipSistemi.Controllers
 {
-    public class MusteriController : Controller
+	[Authorize]
+	public class MusteriController : Controller
     {
 		DbMagazaUrunTakipEntities db = new DbMagazaUrunTakipEntities();
 		public ActionResult Index(int sayfa=1) //baslangıc sayfam 1 olsun

@@ -7,7 +7,8 @@ using System.Web.Mvc;
 
 namespace MagazaUrunTakipSistemi.Controllers
 {
-    public class SatisController : Controller
+	[Authorize]
+	public class SatisController : Controller
     {
 		DbMagazaUrunTakipEntities db = new DbMagazaUrunTakipEntities();
 		public ActionResult Index()

@@ -14,6 +14,7 @@
         <AssociationConnector Association="DbMagazaUrunTakipModel.FK_TblSatis_TblMusteri" ManuallyRouted="false" />
         <AssociationConnector Association="DbMagazaUrunTakipModel.FK_TblSatis_TblPersonel" ManuallyRouted="false" />
         <AssociationConnector Association="DbMagazaUrunTakipModel.FK_TblSatis_TblUrunler" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DbMagazaUrunTakipModel.TblAdmin" Width="1.5" PointX="6.25" PointY="4.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
