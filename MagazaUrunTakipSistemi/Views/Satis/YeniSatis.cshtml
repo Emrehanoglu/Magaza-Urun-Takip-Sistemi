@@ -1,8 +1,23 @@
-﻿
+﻿@model MagazaUrunTakipSistemi.Models.Entity.TblSatis
 @{
     ViewBag.Title = "YeniSatis";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>YeniSatis</h2>
+@using (Html.BeginForm("YeniSatis", "Satis", FormMethod.Post))
+{
+    <label>Ürünler</label>
+    @Html.DropDownListFor(x => x.Urun, (List<SelectListItem>)ViewBag.urunler, new { @class = "form-control" })
+    <br />
+    <label>Personeller</label>
+    @Html.DropDownListFor(x => x.Personel, (List<SelectListItem>)ViewBag.personeller, new { @class = "form-control" })
+    <br />
+    <label>Müşteriler</label>
+    @Html.DropDownListFor(x => x.Musteri, (List<SelectListItem>)ViewBag.musteriler, new { @class = "form-control" })
+    <br />
+    <label>Fiyat</label>
+    @Html.TextBoxFor(x => x.Fiyat, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Ekle</button>
+}
 

@@ -42,13 +42,10 @@ namespace MagazaUrunTakipSistemi.Controllers
 			return View();
 		}
 		[HttpPost]
-		public ActionResult YeniSatis(TblMusteri t)
+		public ActionResult YeniSatis(TblSatis t)
 		{
-			if (!ModelState.IsValid)
-			{
-				return View("MusteriEkle");
-			}
-			db.TblMusteri.Add(t);
+			t.Tarih = DateTime.Today;
+			db.TblSatis.Add(t);
 			db.SaveChanges();
 			return RedirectToAction("Index");
 		}
