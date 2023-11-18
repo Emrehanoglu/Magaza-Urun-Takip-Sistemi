@@ -1,0 +1,22 @@
+﻿@model MagazaUrunTakipSistemi.Models.Entity.TblMusteri
+@{
+    ViewBag.Title = "MusteriEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("MusteriEkle", "Musteri", FormMethod.Post))
+{
+    <label>Ad</label>
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+    <br />
+    <label>Soyad</label>
+    @Html.TextBoxFor(x => x.Soyad, new { @class = "form-control" })
+    <br />
+    <label>Şehir</label>
+    @Html.TextBoxFor(x => x.Sehir, new { @class = "form-control" })
+    <br />
+    <label>Bakiye</label>
+    @Html.TextBoxFor(x => x.Bakiye, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Ekle</button>
+}

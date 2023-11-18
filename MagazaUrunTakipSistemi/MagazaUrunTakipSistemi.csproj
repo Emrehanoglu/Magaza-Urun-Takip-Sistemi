@@ -236,6 +236,8 @@
     <Content Include="Views\Urun\Index.cshtml" />
     <Content Include="Views\Urun\UrunEdit.cshtml" />
     <Content Include="Views\Musteri\Index.cshtml" />
+    <Content Include="Views\Musteri\MusteriEkle.cshtml" />
+    <Content Include="Views\Musteri\MusteriEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
