@@ -1,0 +1,36 @@
+﻿@using MagazaUrunTakipSistemi.Models.Entity
+@model List<TblMusteri>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Şehir</th>
+            <th>Bakiye</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.Id</td>
+                <td>@x.Ad</td>
+                <td>@x.Soyad</td>
+                <td>@x.Sehir</td>
+                <td>@x.Bakiye</td>
+                <td><a href="/Musteri/MusteriSil/@x.Id" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Musteri/MusteriEdit/@x.Id" class="btn btn-primary">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/Musteri/MusteriEkle/" class="btn btn-success">Yeni Musteri Ekle</a>
+

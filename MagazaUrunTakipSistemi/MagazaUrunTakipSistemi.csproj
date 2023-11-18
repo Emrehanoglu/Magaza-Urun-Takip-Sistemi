@@ -131,6 +131,7 @@
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KategoriController.cs" />
+    <Compile Include="Controllers\MusteriController.cs" />
     <Compile Include="Controllers\UrunController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -227,6 +228,7 @@
     <Content Include="Views\Urun\UrunEkle.cshtml" />
     <Content Include="Views\Urun\Index.cshtml" />
     <Content Include="Views\Urun\UrunEdit.cshtml" />
+    <Content Include="Views\Musteri\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
