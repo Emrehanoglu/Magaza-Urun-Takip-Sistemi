@@ -1,0 +1,16 @@
+﻿@model MagazaUrunTakipSistemi.Models.Entity.TblKategori
+@{
+    ViewBag.Title = "KategoriEdit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("KategoriEdit", "Kategori", FormMethod.Post))
+{
+    <label>Id</label>
+    @Html.TextBoxFor(x => x.Id, new { @class = "form-control", @readonly="readonly" })
+    <br />
+    <label>Kategori Adı</label>
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Güncelle</button>
+}

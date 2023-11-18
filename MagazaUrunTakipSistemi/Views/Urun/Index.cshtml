@@ -1,0 +1,40 @@
+﻿@using MagazaUrunTakipSistemi.Models.Entity
+@model List<TblUrunler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Ad</th>
+            <th>Marka</th>
+            <th>Stok</th>
+            <th>Alış Fiyat</th>
+            <th>Satış Fiyat</th>
+            <th>Kategori</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.Id</td>
+                <td>@x.Ad</td>
+                <td>@x.Marka</td>
+                <td>@x.Stok</td>
+                <td>@x.AlisFiyat</td>
+                <td>@x.SatisFiyat</td>
+                <td>@x.TblKategori.Ad</td>
+                <td><a href="/Urun/UrunSil/@x.Id" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Urun/UrunEdit/@x.Id" class="btn btn-primary">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/Urun/UrunEkle/" class="btn btn-success">Yeni Urun Ekle</a>
+

@@ -1,0 +1,30 @@
+﻿@model MagazaUrunTakipSistemi.Models.Entity.TblUrunler
+@{
+    ViewBag.Title = "UrunEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("UrunEkle", "Urun", FormMethod.Post))
+{
+    <label>Urun Adı</label>
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+    <br />
+    <label>Marka</label>
+    @Html.TextBoxFor(x => x.Marka, new { @class = "form-control" })
+    <br />
+    <label>Stok</label>
+    @Html.TextBoxFor(x => x.Stok, new { @class = "form-control" })
+    <br />
+    <label>Alış Fiyat</label>
+    @Html.TextBoxFor(x => x.AlisFiyat, new { @class = "form-control" })
+    <br />
+    <label>Satış Fiyat</label>
+    @Html.TextBoxFor(x => x.SatisFiyat, new { @class = "form-control" })
+    <br />
+    <label>Kategori</label>
+    @Html.DropDownListFor(x => x.Kategori,(List<SelectListItem>)ViewBag.ktgr, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Ekle</button>
+}
+
+

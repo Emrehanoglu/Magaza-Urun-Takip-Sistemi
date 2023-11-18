@@ -27,6 +27,7 @@ namespace MagazaUrunTakipSistemi.Models.Entity
         public Nullable<decimal> AlisFiyat { get; set; }
         public Nullable<decimal> SatisFiyat { get; set; }
         public Nullable<int> Kategori { get; set; }
+        public Nullable<bool> Durum { get; set; }
     
         public virtual TblKategori TblKategori { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
