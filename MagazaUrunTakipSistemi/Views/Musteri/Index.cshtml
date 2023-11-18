@@ -35,5 +35,8 @@
     </tbody>
 </table>
 
+
+@Html.PagedListPager((IPagedList)Model,sayfa=> Url.Action("Index", new { sayfa}))
+
 <a href="/Musteri/MusteriEkle/" class="btn btn-success">Yeni Musteri Ekle</a>
 
