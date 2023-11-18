@@ -17,13 +17,13 @@ namespace MagazaUrunTakipSistemi.Controllers
             return View();
         }
 		[HttpPost]
-		public ActionResult GirisYap(TblAdmin admin)
+		public ActionResult Index(TblAdmin admin)
 		{
 			var giris = db.TblAdmin.FirstOrDefault(x => x.KullaniciAd == admin.KullaniciAd && x.Sifre == admin.Sifre);
 			if (giris != null)
 			{
 				FormsAuthentication.SetAuthCookie(admin.KullaniciAd, false);
-				return View("Index","Kategori");
+				return RedirectToAction("Index","Kategori");
 			}
 			return View();
 		}
